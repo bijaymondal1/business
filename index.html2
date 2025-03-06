@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <a href="#">Instagram</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Feed -->
+    <main>
+        <div class="feed">
+            <!-- Post 1 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://via.placeholder.com/40" alt="User" class="profile-pic">
+                    <span class="username">User1</span>
+                    <button class="more-options">...</button>
+                </div>
+                <img src="https://via.placeholder.com/600x400" alt="Post Image" class="post-image">
+                <div class="post-actions">
+                    <button class="like">❤️</button>
+                    <button class="comment">💬</button>
+                    <button class="share">↗️</button>
+                </div>
+                <div class="post-info">
+                    <span class="likes">200 likes</span>
+                    <p class="caption"><strong>User1</strong> This is an amazing view! #vacation #travel</p>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://via.placeholder.com/40" alt="User" class="profile-pic">
+                    <span class="username">User2</span>
+                    <button class="more-options">...</button>
+                </div>
+                <img src="https://via.placeholder.com/600x400" alt="Post Image" class="post-image">
+                <div class="post-actions">
+                    <button class="like">❤️</button>
+                    <button class="comment">💬</button>
+                    <button class="share">↗️</button>
+                </div>
+                <div class="post-info">
+                    <span class="likes">150 likes</span>
+                    <p class="caption"><strong>User2</strong> Had a great workout today! #fitness</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <span class="suggestions-title">Suggestions for you</span>
+                <a href="#">See All</a>
+            </div>
+            <div class="sidebar-content">
+                <div class="suggested-user">
+                    <img src="https://via.placeholder.com/40" alt="User" class="profile-pic">
+                    <span class="username">User3</span>
+                    <button>Follow</button>
+                </div>
+                <div class="suggested-user">
+                    <img src="https://via.placeholder.com/40" alt="User" class="profile-pic">
+                    <span class="username">User4</span>
+                    <button>Follow</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
