@@ -1,92 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Interface</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">
-            <a href="#">Instagram</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Messages</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Profile</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
 
-    <!-- Main Feed -->
-    <main>
-        <div class="feed">
-            <!-- Post 1 -->
-            <div class="post">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/40" alt="User" class="profile-pic">
-                    <span class="username">User1</span>
-                    <button class="more-options">...</button>
-                </div>
-                <img src="https://via.placeholder.com/600x400" alt="Post Image" class="post-image">
-                <div class="post-actions">
-                    <button class="like">❤️</button>
-                    <button class="comment">💬</button>
-                    <button class="share">↗️</button>
-                </div>
-                <div class="post-info">
-                    <span class="likes">200 likes</span>
-                    <p class="caption"><strong>User1</strong> This is an amazing view! #vacation #travel</p>
-                </div>
-            </div>
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-            <!-- Post 2 -->
-            <div class="post">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/40" alt="User" class="profile-pic">
-                    <span class="username">User2</span>
-                    <button class="more-options">...</button>
-                </div>
-                <img src="https://via.placeholder.com/600x400" alt="Post Image" class="post-image">
-                <div class="post-actions">
-                    <button class="like">❤️</button>
-                    <button class="comment">💬</button>
-                    <button class="share">↗️</button>
-                </div>
-                <div class="post-info">
-                    <span class="likes">150 likes</span>
-                    <p class="caption"><strong>User2</strong> Had a great workout today! #fitness</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <span class="suggestions-title">Suggestions for you</span>
-                <a href="#">See All</a>
-            </div>
-            <div class="sidebar-content">
-                <div class="suggested-user">
-                    <img src="https://via.placeholder.com/40" alt="User" class="profile-pic">
-                    <span class="username">User3</span>
-                    <button>Follow</button>
-                </div>
-                <div class="suggested-user">
-                    <img src="https://via.placeholder.com/40" alt="User" class="profile-pic">
-                    <span class="username">User4</span>
-                    <button>Follow</button>
-                </div>
-            </div>
-        </div>
-    </main>
+header .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.feed {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+.post-header img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-header .username {
+    font-weight: 600;
+}
+
+.post-actions {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.post-info {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.likes {
+    font-weight: bold;
+}
+
+.caption {
+    color: #555;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.suggestions-title {
+    font-size: 18px;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggested-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.suggested-user img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggested-user button {
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.suggested-user button:hover {
+    background-color: #0078d4;
+}
+
