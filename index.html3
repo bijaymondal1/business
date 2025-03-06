@@ -1,0 +1,11 @@
+<button class="like-btn" onclick="toggleLike(this)">❤️ Like</button>
+<script>
+    function toggleLike(button) {
+        button.classList.toggle('liked');
+        if (button.classList.contains('liked')) {
+            button.textContent = '❤️ Liked';
+        } else {
+            button.textContent = '❤️ Like';
+        }
+    }
+</script>
